@@ -491,7 +491,7 @@ test_expect_success 'detect invalid checksum hash' '
 '
 
 test_expect_success 'detect incorrect chunk count' '
-	corrupt_graph_and_verify $GRAPH_BYTE_CHUNK_COUNT "\xff" \
+	corrupt_graph_and_verify $GRAPH_BYTE_CHUNK_COUNT "\377" \
 		"chunk lookup table entry missing" $GRAPH_CHUNK_LOOKUP_OFFSET
 '
 
